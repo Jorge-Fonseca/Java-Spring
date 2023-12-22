@@ -16,7 +16,7 @@ public class Chamado {
 	private String observacoes;
 	private Tecnico tecnico;
 	private Cliente cliente;
-	public Chamado() {
+	public Chamado() { // construtor da super classe vasio
 		super();
 
 	}

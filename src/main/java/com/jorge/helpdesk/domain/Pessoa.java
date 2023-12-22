@@ -18,19 +18,19 @@ protected String cpf;
 protected String email;
 protected String senha;
 protected Set<Integer> perfis = new HashSet<>();
-protected LocalDate datacriacao = LocalDate.now();
-public Pessoa() {
+protected LocalDate datacriacao = LocalDate.now();// método LocalDate.now() pega a data do sistema
+public Pessoa() { // construtor da super class
 	super();
-	addPerfil(Perfil.CLIENTE);
+	addPerfil(Perfil.CLIENTE); // cliente criado passa a ter o perfil de cliente
 }
-public Pessoa(Integer id, String nome, String cpf, String email, String senha) {
+public Pessoa(Integer id, String nome, String cpf, String email, String senha) { // construtor com parametros da super classe
 	super();
 	this.id = id;
 	this.nome = nome;
 	this.cpf = cpf;
 	this.email = email;
 	this.senha = senha;
-	addPerfil(Perfil.CLIENTE);
+	addPerfil(Perfil.CLIENTE); // cliente criado passa a ter o perfil de cliente
 }
 @Override
 public int hashCode() {

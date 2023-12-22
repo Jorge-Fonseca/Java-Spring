@@ -6,7 +6,7 @@ import java.util.List;
 public class Tecnico extends Pessoa{
 	private List <Chamado>chamados = new ArrayList<>();
 
-	public Tecnico() {
+	public Tecnico() { // construtor da super classe vasio
 		super();
 	}
 
