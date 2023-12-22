@@ -1,7 +1,7 @@
 package com.jorge.helpdesk.domain.enums;
 
 public enum Perfil {
-	ADMIN(0, "ROLE_ADMIN"), CLIENTE(1, "ROLE_CLIENTE"),TECNICO(2, "ROLE_CLIENTE");
+	ADMIN(0, "ROLE_ADMIN"), CLIENTE(1, "ROLE_CLIENTE"),TECNICO(2, "ROLE_CLIENTE"); // tipos enumerados
 	private Integer codigo;
 	private String descricao;
 	private Perfil(Integer codigo, String descricao) {

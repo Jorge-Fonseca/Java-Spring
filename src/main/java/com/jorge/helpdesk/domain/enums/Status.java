@@ -1,7 +1,7 @@
 package com.jorge.helpdesk.domain.enums;
 
 public enum Status {
-	ABERTO(0, "ABERTO"), ANDAMENTO(1, "ANDAMENTO"),ENCERRADO(2, "ENCERRADO");
+	ABERTO(0, "ABERTO"), ANDAMENTO(1, "ANDAMENTO"),ENCERRADO(2, "ENCERRADO");// método construtor sem parametro
 	private Integer codigo;
 	private String descricao;
 	private Status(Integer codigo, String descricao) {

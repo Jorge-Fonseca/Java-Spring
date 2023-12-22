@@ -1,7 +1,7 @@
 package com.jorge.helpdesk.domain.enums;
 
 public enum Prioridade {
-	BAIXA(0, "BAIXA"), MEDIA(1, "MEDIA"),ALTA(2, "ALTA");
+	BAIXA(0, "BAIXA"), MEDIA(1, "MEDIA"),ALTA(2, "ALTA"); // tipos enumerados 
 	private Integer codigo;
 	private String descricao;
 	private Prioridade(Integer codigo, String descricao) {
