@@ -1,23 +1,48 @@
 package com.jorge.helpdesk.domain;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 import java.util.HashSet;
 import java.util.Objects;
 import java.util.Set;
 import java.util.stream.Collectors;
+//import javax.persistence.*;
 
 import org.hibernate.annotations.Collate;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import com.jorge.helpdesk.domain.enums.Perfil;
 
-public abstract class Pessoa {
+import jakarta.persistence.CollectionTable;
+import jakarta.persistence.Column;
+import jakarta.persistence.ElementCollection;
+import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+
+//import jakarta.persistence.Entity;
+
+
+@Entity
+public abstract class Pessoa implements Serializable {
+
+	private static final long serialVersionUID = 1L;
+@Id
+@GeneratedValue(strategy = GenerationType.IDENTITY)
 protected Integer id;
 
 protected String nome;
+@Column(unique = true)
 protected String cpf;
+@Column(unique = true)
 protected String email;
 protected String senha;
+@ElementCollection(fetch = FetchType.EAGER)
+@CollectionTable(name="PERFIS")
 protected Set<Integer> perfis = new HashSet<>();
+@JsonFormat(pattern = "dd/MM/yyyy")
 protected LocalDate datacriacao = LocalDate.now();// método LocalDate.now() pega a data do sistema
 public Pessoa() { // construtor da super class
 	super();
