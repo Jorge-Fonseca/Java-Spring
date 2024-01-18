@@ -8,8 +8,6 @@ import java.util.Set;
 import java.util.stream.Collectors;
 //import javax.persistence.*;
 
-import org.hibernate.annotations.Collate;
-
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.jorge.helpdesk.domain.enums.Perfil;
 

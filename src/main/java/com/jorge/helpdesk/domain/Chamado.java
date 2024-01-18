@@ -4,13 +4,10 @@ import java.io.Serializable;
 import java.time.LocalDate;
 import java.util.Objects;
 
-import org.springframework.data.annotation.Persistent;
-
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.jorge.helpdesk.domain.enums.Prioridade;
 import com.jorge.helpdesk.domain.enums.Status;
 
-import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
